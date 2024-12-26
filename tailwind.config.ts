@@ -18,6 +18,9 @@ export default {
       '7xl': ['4rem', { lineHeight: '4.5rem' }],
     },
     extend: {
+      colors: {
+        "back-g-high": "#112221",
+      },
       borderRadius: {
         '4xl': '2.5rem',
       },
@@ -32,3 +35,4 @@ export default {
   },
   plugins: [],
 } satisfies Config
+

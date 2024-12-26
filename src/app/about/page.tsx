@@ -26,7 +26,7 @@ import { loadArticles } from '@/lib/mdx'
 
 function Culture() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
+    <div className="mt-24 rounded-4xl bg-back-g-high py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
         eyebrow="Our culture"
         title="Balance your passion with your passion for life."
@@ -138,7 +138,7 @@ function Team() {
             <Border as={FadeIn} />
             <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
               <FadeIn>
-                <h2 className="font-display text-2xl font-semibold text-neutral-950">
+                <h2 className="font-display text-2xl font-semibold text-back-g-high">
                   {group.title}
                 </h2>
               </FadeIn>
@@ -189,27 +189,24 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro eyebrow="About us" title="Empowering Businesses with Data-Driven Solutions and AI Innovation">
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
-        </p>
+        At Quantical, we specialize in leveraging cutting-edge data science and AI technologies to deliver impactful solutions that drive business growth and efficiency.     </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
+          Our team combines deep expertise in machine learning, data engineering, and business intelligence to help companies navigate complex challenges and unlock the full potential of their data.
+      We take pride in delivering end-to-end solutions, from data collection and cleaning to advanced model development and insightful visualizations. Our work is grounded in real-world business problems, ensuring our solutions are both practical and impactful.
+       
+          We start by understanding your unique needs and challenges, then we design and implement custom solutions that align with your objectives. Whether it's predicting exchange rates, optimizing supply chains, or analyzing competitor pricing, we build models and systems that provide actionable insights and enhance decision-making.
           </p>
           <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
+          We are committed to helping businesses stay ahead of the curve by providing the tools and insights they need to adapt to an ever-changing market. Our solutions are designed to integrate seamlessly with your existing systems, driving both short-term results and long-term value.
+
+Let us help you transform your data into actionable insights that drive growth and operational excellence.
           </p>
         </div>
       </PageIntro>
-      <Container className="mt-16">
+      {/* <Container className="mt-16">
         <StatList>
           <StatListItem value="35" label="Underpaid employees" />
           <StatListItem value="52" label="Placated clients" />
@@ -226,7 +223,7 @@ export default async function About() {
         title="From the blog"
         intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
         pages={blogArticles}
-      />
+      /> */}
 
       <ContactSection />
     </>

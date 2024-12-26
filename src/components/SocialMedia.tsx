@@ -1,15 +1,12 @@
 import Link from 'next/link'
 import clsx from 'clsx'
 
-function FacebookIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function LinkedinIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12Z"
-      />
-    </svg>
+<svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+  <path         fillRule="evenodd"
+        clipRule="evenodd" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+
   )
 }
 
@@ -50,10 +47,8 @@ function DribbbleIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export const socialMediaProfiles = [
-  { title: 'Facebook', href: 'https://facebook.com', icon: FacebookIcon },
-  { title: 'Instagram', href: 'https://instagram.com', icon: InstagramIcon },
-  { title: 'GitHub', href: 'https://github.com', icon: GitHubIcon },
-  { title: 'Dribbble', href: 'https://dribbble.com', icon: DribbbleIcon },
+  { title: 'Linkedin', href: 'https://www.linkedin.com/company/quanticallimited', icon: LinkedinIcon },
+
 ]
 
 export function SocialMedia({
@@ -68,7 +63,7 @@ export function SocialMedia({
       role="list"
       className={clsx(
         'flex gap-x-10',
-        invert ? 'text-white' : 'text-neutral-950',
+        invert ? 'text-white' : 'text-back-g-high',
         className,
       )}
     >
@@ -82,7 +77,7 @@ export function SocialMedia({
               invert ? 'hover:text-neutral-200' : 'hover:text-neutral-700',
             )}
           >
-            <socialMediaProfile.icon className="h-6 w-6 fill-current" />
+            <socialMediaProfile.icon className="h-6 w-6 " />
           </Link>
         </li>
       ))}

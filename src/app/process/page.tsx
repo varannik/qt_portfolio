@@ -11,9 +11,10 @@ import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { TagList, TagListItem } from '@/components/TagList'
-import imageLaptop from '@/images/laptop.jpg'
-import imageMeeting from '@/images/meeting.jpg'
-import imageWhiteboard from '@/images/whiteboard.jpg'
+import dataEng from '@/images/dataEng.webp'
+import needs from '@/images/needs.webp'
+import devops from '@/images/devops.webp'
+
 
 function Section({
   title,
@@ -39,10 +40,10 @@ function Section({
         <div className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first">
           <FadeIn>
             <div
-              className="font-display text-base font-semibold before:text-neutral-300 before:content-['/_'] after:text-neutral-950 after:content-[counter(section,decimal-leading-zero)]"
+              className="font-display text-base font-semibold before:text-neutral-300 before:content-['/_'] after:text-back-g-high after:content-[counter(section,decimal-leading-zero)]"
               aria-hidden="true"
             />
-            <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
+            <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-back-g-high sm:text-4xl">
               {title}
             </h2>
             <div className="mt-6">{children}</div>
@@ -55,129 +56,75 @@ function Section({
 
 function Discover() {
   return (
-    <Section title="Discover" image={{ src: imageWhiteboard }}>
+    <Section title="Understanding Your Business Needs and Defining the Strategy" image={{ src: needs }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          We work closely with our clients to understand their{' '}
-          <strong className="font-semibold text-neutral-950">needs</strong> and
-          goals, embedding ourselves in their every day operations to understand
-          what makes their business tick.
-        </p>
-        <p>
-          Our team of private investigators shadow the company director’s for
-          several weeks while our account managers focus on going through their
-          trash. Our senior security experts then perform social engineering
-          hacks to gain access to their{' '}
-          <strong className="font-semibold text-neutral-950">business</strong>{' '}
-          accounts — handing that information over to our forensic accounting
-          team.
-        </p>
-        <p>
-          Once the full audit is complete, we report back with a comprehensive{' '}
-          <strong className="font-semibold text-neutral-950">plan</strong> and,
-          more importantly, a budget.
+
+          We begin by understanding your <strong className="font-semibold text-back-g-high">business goals</strong> and challenges. Through collaborative workshops and strategic planning, we create a tailored AI roadmap that aligns with your objectives, ensuring clear goals and measurable outcomes.
         </p>
       </div>
+      <List className="mt-8">
+        <ListItem title="Business Analysis">
+          Start by gaining a deep understanding of your goals, challenges, and current business landscape.
+        </ListItem>
+        <ListItem title="Collaborative Workshops">
+          Work closely with your team to pinpoint key opportunities for AI integration.
+        </ListItem>
+        <ListItem title="AI Strategy and Roadmap:">
+          Based on your objectives, we define a clear AI strategy, set measurable goals, and create a detailed implementation roadmap.
+        </ListItem>
+      </List>
 
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Included in this phase
-      </h3>
-      <TagList className="mt-4">
-        <TagListItem>In-depth questionnaires</TagListItem>
-        <TagListItem>Feasibility studies</TagListItem>
-        <TagListItem>Blood samples</TagListItem>
-        <TagListItem>Employee surveys</TagListItem>
-        <TagListItem>Proofs-of-concept</TagListItem>
-        <TagListItem>Forensic audit</TagListItem>
-      </TagList>
     </Section>
   )
 }
 
+
 function Build() {
   return (
-    <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
+    <Section title="Data Engineering and AI Model Development" image={{ src: dataEng, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Based off of the discovery phase, we develop a comprehensive roadmap
-          for each product and start working towards delivery. The roadmap is an
-          intricately tangled mess of technical nonsense designed to drag the
-          project out as long as possible.
-        </p>
-        <p>
-          Each client is assigned a key account manager to keep lines of
-          communication open and obscure the actual progress of the project.
-          They act as a buffer between the client’s incessant nagging and the
-          development team who are hard at work scouring open source projects
-          for code to re-purpose.
-        </p>
-        <p>
-          Our account managers are trained to only reply to client emails after
-          9pm, several days after the initial email. This reinforces the general
-          aura that we are very busy and dissuades clients from asking for
-          changes.
+          With a focus on data, we gather and prepare high-quality data for analysis. We build efficient data pipelines and develop AI models that are specifically designed to meet your business needs, continuously refining them for optimal performance.
         </p>
       </div>
 
-      <Blockquote
-        author={{ name: 'Debra Fiscal', role: 'CEO of Unseal' }}
-        className="mt-12"
-      >
-        Studio were so regular with their progress updates we almost began to
-        think they were automated!
-      </Blockquote>
+      <List className="mt-8">
+        <ListItem title="Data Collection and Preparation">
+          Gather, clean, and prepare data from multiple sources, ensuring it is structured for analysis and modeling.
+        </ListItem>
+        <ListItem title="Data Pipeline Development">
+          Build scalable data pipelines to manage, process, and store your data efficiently for AI use.
+        </ListItem>
+        <ListItem title="AI Model Development">
+          Select and train machine learning models that align with your business objectives, continuously optimizing them for better performance.
+        </ListItem>
+      </List>
+
     </Section>
   )
 }
 
 function Deliver() {
   return (
-    <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
+    <Section title="Deployment, Automation, and Continuous Improvement" image={{ src: devops, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          About halfway through the Build phase, we push each project out by 6
-          weeks due to a change in{' '}
-          <strong className="font-semibold text-neutral-950">
-            requirements
+          Once the AI solution is ready, we{' '} <strong className="font-semibold text-back-g-high">
+            deploy
           </strong>
-          . This allows us to increase the budget a final time before launch.
-        </p>
-        <p>
-          Despite largely using pre-built components, most of the{' '}
-          <strong className="font-semibold text-neutral-950">progress</strong>{' '}
-          on each project takes place in the final 24 hours. The development
-          time allocated to each client is actually spent making augmented
-          reality demos that go viral on social media.
-        </p>
-        <p>
-          We ensure that the main pages of the site are{' '}
-          <strong className="font-semibold text-neutral-950">
-            fully functional
-          </strong>{' '}
-          at launch — the auxiliary pages will, of course, be lorem ipusm shells
-          which get updated as part of our exorbitant{' '}
-          <strong className="font-semibold text-neutral-950">
-            maintenance
-          </strong>{' '}
-          retainer.
+          it seamlessly into your operations. Our AI-driven automation enhances efficiency, while ongoing monitoring and optimization ensure sustained performance and continued value generation.
         </p>
       </div>
-
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Included in this phase
-      </h3>
       <List className="mt-8">
-        <ListItem title="Testing">
-          Our projects always have 100% test coverage, which would be impressive
-          if our tests weren’t as porous as a sieve.
+        <ListItem title="Deployment and Integration">
+          Seamlessly integrate AI solutions into your existing workflows, ensuring smooth operation across business functions.
         </ListItem>
-        <ListItem title="Infrastructure">
-          To ensure reliability we only use the best Digital Ocean droplets that
-          $4 a month can buy.
+        <ListItem title="Process Automation">
+          AI-driven automation of repetitive tasks improves efficiency and reduces errors across operations.
         </ListItem>
-        <ListItem title="Support">
-          Because we hold the API keys for every critical service your business
-          uses, you can expect a lifetime of support, and invoices, from us.
+        <ListItem title="Performance Monitoring and Optimization">
+          Continuously track AI performance, measuring its impact, and making ongoing improvements to maximize value.
         </ListItem>
       </List>
     </Section>
@@ -195,43 +142,33 @@ function Values() {
       </div>
 
       <SectionIntro
-        eyebrow="Our values"
-        title="Balancing reliability and innovation"
+        eyebrow="Tech Stack "
+        title="Our Advanced AI and Data Engineering Solutions"
       >
         <p>
-          We strive to stay at the forefront of emerging trends and
-          technologies, while completely ignoring them and forking that old
-          Rails project we feel comfortable using. We stand by our core values
-          to justify that decision.
+          We leverage cutting-edge open-source technologies to deliver world-class AI solutions that align with your business objectives. Our approach ensures high-quality data engineering, scalable AI model development, seamless deployment, and continuous optimization.
         </p>
       </SectionIntro>
 
       <Container className="mt-24">
         <GridList>
-          <GridListItem title="Meticulous">
-            The first part of any partnership is getting our designer to put
-            your logo in our template. The second step is getting them to do the
-            colors.
+          <GridListItem title="AI Model Development">
+          TensorFlow, PyTorch, Hugging Face Transformers, MXNet
           </GridListItem>
-          <GridListItem title="Efficient">
-            We pride ourselves on never missing a deadline which is easy because
-            most of the work was done years ago.
+          <GridListItem title="Data Engineering">
+          Apache Airflow, Apache Kafka, dbt
           </GridListItem>
-          <GridListItem title="Adaptable">
-            Every business has unique needs and our greatest challenge is
-            shoe-horning those needs into something we already built.
+          <GridListItem title="Deployment">
+          Kubernetes, Docker, TensorFlow Serving, TorchServe, Helm
           </GridListItem>
-          <GridListItem title="Honest">
-            We are transparent about all of our processes, banking on the simple
-            fact our clients never actually read anything.
+          <GridListItem title="Monitoring and Performance Optimization">
+          Elasticsearch, Grafana
           </GridListItem>
-          <GridListItem title="Loyal">
-            We foster long-term relationships with our clients that go beyond
-            just delivering a product, allowing us to invoice them for decades.
+          <GridListItem title="Automation & Continuous Improvement">
+          Argo CD, Jenkins, CircleCI, GitLab CI/CD
           </GridListItem>
-          <GridListItem title="Innovative">
-            The technological landscape is always evolving and so are we. We are
-            constantly on the lookout for new open source projects to clone.
+          <GridListItem title="Web development">
+            Django, Nodejs, Nextjs, PostgreSQL, MongoDB
           </GridListItem>
         </GridList>
       </Container>
@@ -248,11 +185,9 @@ export const metadata: Metadata = {
 export default function Process() {
   return (
     <>
-      <PageIntro eyebrow="Our process" title="How we work">
+      <PageIntro eyebrow="Our process" title="End-to-End Solutions for Your Business Success">
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          We provide complete, seamless technical solutions that bring your ideas to life—from initial consultation to final execution..
         </p>
       </PageIntro>
 

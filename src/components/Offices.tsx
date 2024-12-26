@@ -16,7 +16,7 @@ function Office({
         invert ? 'text-neutral-300' : 'text-neutral-600',
       )}
     >
-      <strong className={invert ? 'text-white' : 'text-neutral-950'}>
+      <strong className={invert ? 'text-white' : 'text-back-g-high'}>
         {name}
       </strong>
       <br />
@@ -32,17 +32,10 @@ export function Offices({
   return (
     <ul role="list" {...props}>
       <li>
-        <Office name="Copenhagen" invert={invert}>
-          1 Carlsberg Gate
+        <Office name="UK" invert={invert}>
+        Sanford House,81 Skipper Way,
           <br />
-          1260, København, Denmark
-        </Office>
-      </li>
-      <li>
-        <Office name="Billund" invert={invert}>
-          24 Lego Allé
-          <br />
-          7190, Billund, Denmark
+          St Neots
         </Office>
       </li>
     </ul>

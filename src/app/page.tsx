@@ -9,53 +9,32 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
-import logoUnseal from '@/images/clients/unseal/logo-light.svg'
-import imageLaptop from '@/images/laptop.jpg'
-import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
-const clients = [
-  ['Phobia', logoPhobiaLight],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
-]
+import imageLaptop from '@/images/laptop.webp'
+import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+import { FounderQ } from '@/components/FounderQ'
+
 
 function Clients() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+    <div className="mt-24 rounded-4xl bg-back-g-high py-20 sm:mt-32 sm:py-32 lg:mt-56">
       <Container>
-        <FadeIn className="flex items-center gap-x-8">
-          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+        <FadeIn className="flex items-center gap-x-8 pb-5">
+          <h2 className="text-center font-display text-4xl font-semibold tracking-wider text-white sm:text-left">
+            Which Areas We Support
           </h2>
-          <div className="h-px flex-auto bg-neutral-800" />
+          <div className="h-px flex-auto bg-gray-400 " />
         </FadeIn>
-        <FadeInStagger faster>
-          <ul
-            role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
-          >
-            {clients.map(([client, logo]) => (
-              <li key={client}>
-                <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
-                </FadeIn>
-              </li>
-            ))}
-          </ul>
-        </FadeInStagger>
+
+        <FadeIn className="flex items-center gap-x-8">
+          <blockquote className="relative font-display text-2xl font-medium tracking-tight text-white sm:text-2xl">
+            <p className="before:content-['“'] after:content-['”'] sm:before:absolute sm:before:right-full">
+              At Quantical, we provide targeted support across diverse areas, ensuring businesses maximize the value of AI integration.
+            </p>
+          </blockquote>
+        </FadeIn>
+
+
       </Container>
     </div>
   )
@@ -69,7 +48,7 @@ function CaseStudies({
   return (
     <>
       <SectionIntro
-        title="Harnessing technology for a brighter future"
+        title="Why Choose Quantical?"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
@@ -85,16 +64,16 @@ function CaseStudies({
               <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
                 <h3>
                   <Link href={caseStudy.href}>
-                    <span className="absolute inset-0 rounded-3xl" />
-                    <Image
-                      src={caseStudy.logo}
-                      alt={caseStudy.client}
-                      className="h-16 w-16"
-                      unoptimized
-                    />
-                  </Link>
+                  <span className="absolute inset-0 rounded-3xl" />
+                  {/* <Image
+                    src={caseStudy.logo}
+                    alt={caseStudy.client}
+                    className="h-16 w-16"
+                    unoptimized
+                  /> */}
+                </Link>
                 </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
+                <p className="mt-6 flex gap-x-2 text-sm text-back-g-high">
                   <time
                     dateTime={caseStudy.date.split('-')[0]}
                     className="font-semibold"
@@ -104,9 +83,9 @@ function CaseStudies({
                   <span className="text-neutral-300" aria-hidden="true">
                     /
                   </span>
-                  <span>Case study</span>
+                  <span>Project</span>
                 </p>
-                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
+                <p className="mt-6 font-display text-2xl font-semibold text-back-g-high">
                   {caseStudy.title}
                 </p>
                 <p className="mt-4 text-base text-neutral-600">
@@ -126,12 +105,11 @@ function Services() {
     <>
       <SectionIntro
         eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
+        title="Our mission is to revolutionize how businesses leverage AI "
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
+          By delivering seamless, scalable, and impactful solutions, We are committed to helping organizations unlock new opportunities, solve complex challenges, and drive growth through data-driven innovation.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -146,25 +124,39 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+            <ListItem title="AI-Driven Innovations">
+
+              <ul className="list-disc pl-6 mt-6 text-md ">
+                <li className="mb-2">Development of AI-powered products and services.</li>
+                <li className="mb-2">Integration of machine learning to solve complex challenges.</li>
+                <li className="mb-2">Continuous innovation to stay ahead in a competitive market.</li>
+              </ul>
             </ListItem>
-            <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title="AI-Enhanced Business Solutions">
+
+              <ul className="list-disc pl-6 mt-6 text-md ">
+                <li className="mb-2">Automating repetitive processes to improve efficiency.</li>
+                <li className="mb-2">Leveraging AI for real-time decision-making and insights.</li>
+                <li className="mb-2">Implementing AI tools to optimize resource allocation and workflows.</li>
+              </ul>
             </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+            <ListItem title="Sales and Marketing Excellence">
+
+              <ul className="list-disc pl-6 mt-6 text-md ">
+                <li className="mb-2">Data-driven approaches to optimize sales performance.</li>
+                <li className="mb-2">Enhanced customer engagement through targeted marketing.</li>
+                <li className="mb-2">Comprehensive market research to identify trends and opportunities.</li>
+              </ul>
             </ListItem>
-            <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title="Data Science and Analytics">
+
+              <ul className="list-disc pl-6 mt-6 text-md ">
+                <li className="mb-2">Advanced analytics to extract actionable insights from data.</li>
+                <li className="mb-2">Predictive modeling for smarter business strategies.</li>
+                <li className="mb-2">Customized data solutions to support informed decision-making.</li>
+              </ul>
             </ListItem>
+
           </List>
         </div>
       </Container>
@@ -182,15 +174,15 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="mt-24 sm:mt-32 md:mt-56">
+      <Container className="mt-24 sm:mt-28 md:mt-38">
         <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Award-winning development studio based in Denmark.
+          <h1 className="font-display text-4xl font-medium tracking-tight text-back-g-high [text-wrap:balance] sm:text-6xl">
+            Welcome to <span className='text-5xl sm:text-7xl'>Quantical</span>
+            <br />Empowering Your Business with
+            <br />AI Excellence
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            We are a development studio working at the intersection of design
-            and technology. It’s a really busy intersection though — a lot of
-            our staff have been involved in hit and runs.
+            At Quantical, we are passionate about transforming businesses by integrating cutting-edge Artificial Intelligence (AI) solutions. Whether you are looking to optimize operations, gain actionable insights, or future-proof your business processes, Quantical is your trusted partner in harnessing the power of AI.
           </p>
         </FadeIn>
       </Container>
@@ -199,16 +191,11 @@ export default async function Home() {
 
       <CaseStudies caseStudies={caseStudies} />
 
-      <Testimonial
-        className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
-      >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
-      </Testimonial>
+     
+
 
       <Services />
+      <FounderQ />
 
       <ContactSection />
     </>

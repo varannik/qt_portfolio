@@ -1,0 +1,77 @@
+
+export const caseStudy = {
+  client: 'Huawei',
+  title: 'Employing LLMs for Incident Response in Telecom',
+  description:
+    'Our latest project integrates Large Language Models (LLMs) with Knowledge Graphs to revolutionize Root Cause Analysis (RCA), improving the automation of incident investigation and resolution.',
+  summary: [
+   "By leveraging LLM-based agents, we aim to provide faster, more accurate insights into network issues, reducing the operational burden and minimizing downtime."
+  ],
+  // logo,
+  // image: { src: imageHero },
+  date: '2024-03',
+  service: 'Natural Language Processing (NLP) & LLM Integration, Knowledge Graph Creation & Management, Root Cause Analysis',
+
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Ongoing Project`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+In the fast-paced world of telecommunications, efficient and timely incident response is critical for maintaining optimal service levels. Our project integrates **Large Language Models (LLMs)** with **Knowledge Graphs** to enhance **Root Cause Analysis (RCA)**, ultimately automating incident investigation and resolution. The goal is to leverage LLM-based agents to quickly and accurately identify the underlying causes of network issues, enabling faster resolution and reducing system downtime.
+
+## Core Technologies
+
+### LLM-based Agents
+LLMs process complex, unstructured data (such as logs, alerts, and historical reports) to detect patterns and infer root causes. By understanding and interpreting human language, these agents can propose potential causes and hypotheses based on vast amounts of historical network data.
+
+### Knowledge Graphs
+Knowledge Graphs serve as a dynamic repository that links network components and their relationships. By providing contextual understanding of the network’s topology, Knowledge Graphs allow LLMs to correlate disruptions across different systems and identify cascading issues that could indicate the root cause of an incident.
+
+## Challenges Faced
+
+### 1. Data Complexity and Quality
+Telecom networks generate large volumes of unstructured data, including logs and alarms, which must be cleaned and preprocessed for LLMs to analyze. Integrating data from diverse sources and ensuring its quality is a key challenge.
+
+### 2. Model Training and Adaptation
+Telecom networks have unique terminology and operational processes. Training LLMs to understand this domain-specific language requires continuous fine-tuning and adaptation to the evolving nature of networks and incidents.
+
+### 3. Knowledge Graph Maintenance
+Knowledge Graphs must be constantly updated as network configurations and components change. Maintaining accuracy while scaling these graphs for large networks presents a challenge, requiring both automated tools and manual oversight.
+
+### 4. Scalability and Performance
+Telecom networks can be vast, requiring LLMs to scale and process data in real-time while ensuring minimal delay. Building infrastructure to handle this level of data throughput without compromising performance is a technical hurdle.
+
+### 5. Integration with Legacy Systems
+Many telecom companies already have established incident response tools. Seamlessly integrating LLM-based agents with these systems, such as monitoring, alerting, and ticketing platforms, is crucial for ensuring smooth workflows.
+
+### 6. Trust and Explainability
+LLMs can often act as "black-box" models, which can undermine trust in their decisions. Ensuring that the RCA process is explainable and transparent is vital for stakeholders, particularly when operational decisions are based on these insights.
+
+## What we are using
+
+<TagList>
+  <TagListItem>OpenAI GPT (via API)</TagListItem>
+  <TagListItem>Neo4j</TagListItem>
+  <TagListItem>TensorFlow, PyTorch, Scikit-learn</TagListItem>
+  <TagListItem>Airflow</TagListItem>
+  
+</TagList>
+
+{/* <Blockquote
+  author={{ name: 'Emily Selman', role: 'Head of Engineering at Unseal' }}
+  image={{ src: imageEmilySelman }}
+>
+  Studio did an amazing job building out our core blockchain infrastructure and
+  I’m sure once PlaceboCoin rallies they’ll be able to finish the project.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="34%" label="Fewer transactions" />
+  <StatListItem value="10%" label="Slower transactions" />
+  <StatListItem value="1000ms" label="Transaction latency" />
+  <StatListItem value="3" label="Active nodes" />
+</StatList> */}
