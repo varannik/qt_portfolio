@@ -7,7 +7,7 @@ import '@/styles/tailwind.css'
 export const metadata: Metadata = {
   title: {
     template: '%s - Quantical',
-    default: 'Quantical - Innovative AI Solutions',
+    default: 'Quantical - Innovative AI Solutions for Business Growth and Success',
   },
 }
 
