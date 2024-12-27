@@ -43,132 +43,12 @@ function Culture() {
   )
 }
 
-const team = [
-  {
-    title: 'Leadership',
-    people: [
-      {
-        name: 'Leslie Alexander',
-        role: 'Co-Founder / CEO',
-        image: { src: imageLeslieAlexander },
-      },
-      {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
-        image: { src: imageMichaelFoster },
-      },
-      {
-        name: 'Dries Vincent',
-        role: 'Partner & Business Relations',
-        image: { src: imageDriesVincent },
-      },
-    ],
-  },
-  {
-    title: 'Team',
-    people: [
-      {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
-        image: { src: imageChelseaHagon },
-      },
-      {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
-        image: { src: imageEmmaDorsey },
-      },
-      {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
-      },
-      {
-        name: 'Blake Reid',
-        role: 'Junior Copywriter',
-        image: { src: imageBlakeReid },
-      },
-      {
-        name: 'Kathryn Murphy',
-        role: 'VP, Human Resources',
-        image: { src: imageKathrynMurphy },
-      },
-      {
-        name: 'Whitney Francis',
-        role: 'Content Specialist',
-        image: { src: imageWhitneyFrancis },
-      },
-      {
-        name: 'Jeffrey Webb',
-        role: 'Account Coordinator',
-        image: { src: imageJeffreyWebb },
-      },
-      {
-        name: 'Benjamin Russel',
-        role: 'Senior Developer',
-        image: { src: imageBenjaminRussel },
-      },
-      {
-        name: 'Angela Fisher',
-        role: 'Front-end Developer',
-        image: { src: imageAngelaFisher },
-      },
-    ],
-  },
-]
 
-function Team() {
-  return (
-    <Container className="mt-24 sm:mt-32 lg:mt-40">
-      <div className="space-y-24">
-        {team.map((group) => (
-          <FadeInStagger key={group.title}>
-            <Border as={FadeIn} />
-            <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
-              <FadeIn>
-                <h2 className="font-display text-2xl font-semibold text-back-g-high">
-                  {group.title}
-                </h2>
-              </FadeIn>
-              <div className="lg:col-span-3">
-                <ul
-                  role="list"
-                  className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8"
-                >
-                  {group.people.map((person) => (
-                    <li key={person.name}>
-                      <FadeIn>
-                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
-                          <Image
-                            alt=""
-                            {...person.image}
-                            className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
-                            <p className="font-display text-base/6 font-semibold tracking-wide text-white">
-                              {person.name}
-                            </p>
-                            <p className="mt-2 text-sm text-white">
-                              {person.role}
-                            </p>
-                          </div>
-                        </div>
-                      </FadeIn>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </FadeInStagger>
-        ))}
-      </div>
-    </Container>
-  )
-}
 
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+    'Empowering Businesses with Data-Driven Solutions and AI Innovation',
 }
 
 export default async function About() {
@@ -178,39 +58,21 @@ export default async function About() {
     <>
       <PageIntro eyebrow="About us" title="Empowering Businesses with Data-Driven Solutions and AI Innovation">
         <p>
-        At Quantical, we specialize in leveraging cutting-edge data science and AI technologies to deliver impactful solutions that drive business growth and efficiency.     </p>
+          At Quantical, we specialize in leveraging cutting-edge data science and AI technologies to deliver impactful solutions that drive business growth and efficiency.</p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-          Our team combines deep expertise in machine learning, data engineering, and business intelligence to help companies navigate complex challenges and unlock the full potential of their data.
-      We take pride in delivering end-to-end solutions, from data collection and cleaning to advanced model development and insightful visualizations. Our work is grounded in real-world business problems, ensuring our solutions are both practical and impactful.
-       
-          We start by understanding your unique needs and challenges, then we design and implement custom solutions that align with your objectives. Whether it's predicting exchange rates, optimizing supply chains, or analyzing competitor pricing, we build models and systems that provide actionable insights and enhance decision-making.
+            Our team combines deep expertise in machine learning, data engineering, and business intelligence to help companies navigate complex challenges and unlock the full potential of their data.
+            We take pride in delivering end-to-end solutions, from data collection and cleaning to advanced model development and insightful visualizations. Our work is grounded in real-world business problems, ensuring our solutions are both practical and impactful.
+
+            We start by understanding your unique needs and challenges, then we design and implement custom solutions that align with your objectives. Whether it's predicting exchange rates, optimizing supply chains, or analyzing competitor pricing, we build models and systems that provide actionable insights and enhance decision-making.
           </p>
           <p>
-          We are committed to helping businesses stay ahead of the curve by providing the tools and insights they need to adapt to an ever-changing market. Our solutions are designed to integrate seamlessly with your existing systems, driving both short-term results and long-term value.
+            We are committed to helping businesses stay ahead of the curve by providing the tools and insights they need to adapt to an ever-changing market. Our solutions are designed to integrate seamlessly with your existing systems, driving both short-term results and long-term value.
 
-Let us help you transform your data into actionable insights that drive growth and operational excellence.
+            Let us help you transform your data into actionable insights that drive growth and operational excellence.
           </p>
         </div>
       </PageIntro>
-      {/* <Container className="mt-16">
-        <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
-        </StatList>
-      </Container>
-
-      <Culture />
-
-      <Team />
-
-      <PageLinks
-        className="mt-24 sm:mt-32 lg:mt-40"
-        title="From the blog"
-        intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
-        pages={blogArticles}
-      /> */}
 
       <ContactSection />
     </>
