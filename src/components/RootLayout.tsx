@@ -245,7 +245,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
                     <h2 className="font-display text-base font-semibold text-white">
                       Follow us
                     </h2>
-                    <SocialMedia className="mt-6"  />
+                    <SocialMedia className="mt-6" invert />
                   </div>
                 </div>
               </Container>
